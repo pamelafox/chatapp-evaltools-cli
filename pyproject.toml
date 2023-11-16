@@ -3,6 +3,10 @@ line-length = 120
 target-version = "py311"
 select = ["E", "F", "I", "UP"]
 ignore = ["D203"]
+src = ["src"]
+
+[tool.ruff.isort]
+known-local-folder = ["src"]
 
 [tool.black]
 line-length = 120
@@ -11,7 +15,35 @@ target-version = ["py311"]
 [tool.pytest.ini_options]
 addopts = "-ra --cov"
 testpaths = ["tests"]
-pythonpath = ['.']
+pythonpath = ['src']
 
 [tool.coverage.report]
 show_missing = true
+
+[build-system]
+requires = ["setuptools", "setuptools_scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatapp-evaltools"
+description = "Super generic evaluation tools for AI chat apps"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "textual",
+    "typer"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "ruff",
+    "black",
+    "pytest",
+    "coverage",
+    "pytest-cov"
+]
+
+[project.scripts]
+evaltools = "cli:cli"

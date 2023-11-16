@@ -1,4 +1,7 @@
--r requirements.txt
+textual
+typer
+
+[dev]
 pre-commit
 ruff
 black
