@@ -2,8 +2,7 @@ from pathlib import Path
 
 import typer
 
-import diff_app
-import summary_app
+from chatapp_evaltools import diff_app, summary_app
 
 app = typer.Typer()
 
