@@ -21,3 +21,5 @@ evaltools summary examples/results
 ## Contributing
 
 pip install -e ".[dev]"
+
+pre-commit install
