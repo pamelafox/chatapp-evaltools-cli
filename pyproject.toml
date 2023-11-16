@@ -24,10 +24,16 @@ show_missing = true
 requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.setuptools.package-data]
+"*" = ["*.tcss"]
+
 [project]
 name = "chatapp-evaltools"
 description = "Super generic evaluation tools for AI chat apps"
-version = "0.0.1"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
