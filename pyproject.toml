@@ -30,6 +30,10 @@ local_scheme = "no-local-version"
 [tool.setuptools.package-data]
 "*" = ["*.tcss"]
 
+[tool.semantic_release]
+version_toml = "pyproject.toml:project.version"
+branch = "main"
+
 [project]
 name = "chatapp-evaltools"
 description = "Super generic evaluation tools for AI chat apps"
