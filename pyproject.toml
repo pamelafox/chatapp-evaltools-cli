@@ -59,4 +59,4 @@ dev = [
 ]
 
 [project.scripts]
-evaltools = "chatapp_evaltools.cli:cli"
+chatapp-evaltools = "chatapp_evaltools.cli:cli"
