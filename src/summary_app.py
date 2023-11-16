@@ -29,7 +29,7 @@ class ParametersScreen(ModalScreen):
 
 
 class TableApp(App):
-    def __init__(self, results_dir:Path) -> None:
+    def __init__(self, results_dir: Path) -> None:
         super().__init__()
         self.rows = [
             ("folder", "groundedness", "%", "relevance", "%", "coherence", "%", "citation %", "length"),
